@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Exchange App</title>
+        <link rel="stylesheet" href="styles.css">
+        
+    </head>
+    <body>
+        <div class="exchangeRate">
+            <div class="header">
+                <div>
+                    <h1>Your Exchange Rate Platform</h1>
+                    <p>You're welcome to the one stop shop for your currency rates.</p>
+                </div>
+            </div>
+            <div class="get_rate">
+                <h3>Search for latest rates against the dollar</h3>
+                <div>
+                    <select name="xRate" id="xRate">
+                        <option value="EUR">USD/EUR</option>
+                        <option value="GBP">USD/GBP</option>
+                        <option value="CAD">USD/CAD</option>
+                        <option value="BGN">USD/BGN</option>
+                        <option value="CHF">USD/CHF</option>
+                        <option value="CNY">USD/CNY</option>
+                        <option value="EGP">USD/EGP</option>
+                        <option value="AUD">USD/AUD</option>
+                    </select>
+                    <input type="button" id="searchBtn" value="Search">
+                </div>
+                <div id="display"></div>
+            </div>
+            <div class="get_rate">
+                <h3>Find country name by typing the currency code</h3>
+                <div class="findCode">
+                    <input type="text" id="findCode" value="">
+                    <input type="button" id="codeBtn" value="Find">
+                </div>
+                <div id="displayFind"></div>
+            </div>         
+            <div class="currency">
+                <form>
+                    <div class="containerdiv">
+                        <div class="first">
+                            <label for="amount">Amount:</label>
+                            <input type="number" id="amount" name="amount">
+                        </div>
+                        <div class="second">
+                            <label for="fromCurrency"> From Currrecy:</label>
+                            <select id="fromCurrency" name="fromCurrency">
+                                <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                                <option value="GBP">GBP</option>
+                                <option value="CAD">CAD</option>
+                                <option value="AUD">AUD</option>
+                                <option value="CHF">CHF</option>
+                                <option value="EBP">EBP</option>
+                                <option value="CNY">CNY</option>
+                                <option value="BGN">BGN</option>
+                                <option value="NGN">NGN</option>
+                                <option value="AED">AED</option>
+                                <option value="AFN">AFN</option>
+                                <option value="ALL">ALL</option>
+                                <option value="BBD">BBD</option>
+                            </select>
+                        </div> 
+                        <div class="third">
+                            <label for="toCurrency">To Currency:</label>
+                            <select id="toCurrency" name="toCurrency">
+                                <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                                <option value="GBP">GBP</option>
+                                <option value="CAD">CAD</option>
+                                <option value="AUD">AUD</option>
+                                <option value="CHF">CHF</option>
+                                <option value="EBP">EBP</option>
+                                <option value="CNY">CNY</option>
+                                <option value="BGN">BGN</option>
+                                <option value="NGN">NGN</option>
+                                <option value="AED">AED</option>
+                                <option value="AFN">AFN</option>
+                                <option value="ALL">ALL</option>
+                                <option value="BBD">BBD</option>
+                            </select>
+                        </div>
+                    </div>                    
+                    <input type="button" id="convertBtn" value="Convert">
+                </form>
+                <div id="result"></div>
+            </div>
+            
+        </div>
+        <script src="exchange.js"></script>        
+    </body>
+</html>
