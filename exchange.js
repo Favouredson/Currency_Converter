@@ -1,4 +1,4 @@
-// Add and Event listiner to the button
+// Add an Event listiner to the button
 var convertBtn = document.getElementById('convertBtn');
 if (convertBtn !== null) {
     convertBtn.addEventListener('click', function() {      
@@ -24,7 +24,7 @@ if (convertBtn !== null) {
     });
   }
 
-  // Add and Event listiner to the button to make currency rate
+  // Add an Event listiner to the button to make currency rate
   var searchBtn = document.getElementById('searchBtn');
   searchBtn.addEventListener('click', function(){
     var toCurrency = document.getElementById('xRate').value;
@@ -44,7 +44,7 @@ if (convertBtn !== null) {
         });
   });
 
-    // Add and Event listiner to the button to make code search
+    // Add an Event listiner to the button to make code search
 document.getElementById('codeBtn').addEventListener('click', function(){
     const myWord = document.getElementById('findCode').value;
     const UrlApi = 'https://v6.exchangerate-api.com/v6/15d70c87deffd2697ffa3255/codes';
@@ -54,7 +54,7 @@ document.getElementById('codeBtn').addEventListener('click', function(){
         })
         .then(function(data){            
             for(const currency of data.supported_codes){
-                if(currency[0] === myWord){
+                if(currency[0].toLowerCase() === myWord.toLowerCase()){
                     var newWord = currency[1];
                 }
             }
